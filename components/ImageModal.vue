@@ -104,71 +104,62 @@ const imageStyle = computed(() => ({
     </div>
 
     <!-- Modal Overlay -->
-    <transition
-      enter-active-class="transition duration-300 ease-out"
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-active-class="transition duration-200 ease-in"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
-      <div 
-        v-if="isOpen" 
-        class="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 backdrop-blur-sm"
-        @click.self="closeModal"
-        @mousemove="onDrag"
-        @mouseup="stopDrag"
-        @mouseleave="stopDrag"
+    <Teleport to="body">
+      <transition
+        enter-active-class="transition duration-300 ease-out"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition duration-200 ease-in"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
       >
-        <!-- Toolbar -->
-        <div class="absolute top-6 right-6 flex items-center gap-4 z-[1000]">
-          <div class="bg-white/10 backdrop-blur rounded-full px-4 py-1.5 text-white/80 text-sm border border-white/10 hidden sm:block select-none">
-            {{ Math.round(scale * 100) }}%
-          </div>
-          
-          <button 
-            class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/10 backdrop-blur group"
-            title="Reset Zoom"
-            @click="scale = 1; position = { x: 0, y: 0 }"
-          >
-            <carbon:fit-to-screen class="text-xl group-active:scale-90 transition-transform" />
-          </button>
-          
-          <button 
-            class="p-2.5 rounded-full bg-white/10 hover:bg-red-500/80 text-white transition-colors border border-white/10 backdrop-blur group"
-            title="Close (Esc)"
-            @click="closeModal"
-          >
-            <carbon:close class="text-xl group-active:scale-90 transition-transform" />
-          </button>
-        </div>
-
-        <!-- Main Image Area -->
         <div 
-          class="w-full h-full flex items-center justify-center overflow-hidden p-4 sm:p-10"
-          @wheel="handleWheel"
+          v-if="isOpen" 
+          class="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 backdrop-blur-sm"
+          @click.self="closeModal"
+          @mousemove="onDrag"
+          @mouseup="stopDrag"
+          @mouseleave="stopDrag"
         >
-          <img 
-            :src="src" 
-            class="max-w-full max-h-full object-contain select-none shadow-2xl"
-            :style="imageStyle"
-            @mousedown="startDrag"
-            @click.stop="toggleZoom"
-            draggable="false"
-          />
-        </div>
-        
-        <!-- Bottom Hint -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-300" :class="scale > 1 ? 'opacity-0' : 'opacity-100'">
-          <div class="bg-black/60 backdrop-blur border border-white/10 px-4 py-2 rounded-full text-white/70 text-xs sm:text-sm flex items-center gap-2 shadow-lg">
-            <carbon:cursor-1 class="text-base" />
-            <span>点击或滚动缩放</span>
-            <span class="w-1 h-1 bg-white/30 rounded-full mx-1"></span>
-            <carbon:move class="text-base" />
-            <span>拖动查看细节</span>
+          <!-- Toolbar -->
+          <div class="absolute top-6 right-6 flex items-center gap-4 z-[1000]">
+            <div class="bg-white/10 backdrop-blur rounded-full px-4 py-1.5 text-white/80 text-sm border border-white/10 hidden sm:block select-none">
+              {{ Math.round(scale * 100) }}%
+            </div>
+            
+            <button 
+              class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/10 backdrop-blur group"
+              title="Reset Zoom"
+              @click="scale = 1; position = { x: 0, y: 0 }"
+            >
+              <carbon:fit-to-screen class="text-xl group-active:scale-90 transition-transform" />
+            </button>
+            
+            <button 
+              class="p-2.5 rounded-full bg-white/10 hover:bg-red-500/80 text-white transition-colors border border-white/10 backdrop-blur group"
+              title="Close (Esc)"
+              @click="closeModal"
+            >
+              <carbon:close class="text-xl group-active:scale-90 transition-transform" />
+            </button>
+          </div>
+
+          <!-- Main Image Area -->
+          <div 
+            class="w-full h-full flex items-center justify-center overflow-hidden p-4 sm:p-10"
+            @wheel="handleWheel"
+          >
+            <img 
+              :src="src" 
+              class="max-w-full max-h-full object-contain select-none shadow-2xl"
+              :style="imageStyle"
+              @mousedown="startDrag"
+              @click.stop="toggleZoom"
+              draggable="false"
+            />
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </Teleport>
   </div>
 </template>

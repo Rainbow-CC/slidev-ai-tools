@@ -32,12 +32,10 @@ mdc: true
 
 ---
 transition: fade-out
-layout: default
+layout: two-cols
 ---
 
 # 宏观背景：AI 如何重塑金融管理？
-
-<v-clicks>
 
 - <div class="flex items-center gap-2">
     <carbon:data-view-alt class="text-blue-500 text-xl" />
@@ -63,7 +61,9 @@ layout: default
   </div>
   <p class="ml-8 opacity-80 text-sm">AI 不再只是对话，而是具备深度思维的智囊</p>
 
-</v-clicks>
+::right::
+
+<!-- No image provided, leaving blank -->
 
 ---
 transition: slide-up
@@ -113,19 +113,18 @@ transition: slide-left
 </div>
 
 ---
-layout: default
+layout: two-cols
 transition: slide-left
 ---
 
 # 推荐二：沟通与会议神器
 ## 讯飞星火 & 腾讯会议
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-1 gap-6 mt-4">
 
 <div class="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20">
   <div class="text-lg font-bold text-blue-400 mb-2">讯飞星火 (Spark)</div>
   <div class="text-sm opacity-70 mb-4">会议纪要与实时转写</div>
-  <v-clicks at="1">
     <div class="space-y-2 text-sm">
       <div class="flex gap-2">
         <carbon:chat /> <strong>语音转写：</strong> 准确率98%，区分发言人
@@ -134,13 +133,11 @@ transition: slide-left
         <carbon:task /> <strong>智能待办：</strong> 自动生成会议To-Do List
       </div>
     </div>
-  </v-clicks>
 </div>
 
 <div class="bg-indigo-500/10 p-4 rounded-lg border border-indigo-500/20">
   <div class="text-lg font-bold text-indigo-400 mb-2">腾讯会议 AI</div>
   <div class="text-sm opacity-70 mb-4">智能会议助手</div>
-  <v-clicks at="2">
     <div class="space-y-2 text-sm">
       <div class="flex gap-2">
         <carbon:video /> <strong>AI 智能录制：</strong> 自动生成会议纪要与摘要
@@ -149,10 +146,13 @@ transition: slide-left
         <carbon:search /> <strong>全文搜索：</strong> 关键词快速定位会议录像
       </div>
     </div>
-  </v-clicks>
 </div>
 
 </div>
+
+::right::
+
+<!-- No specific image provided, leaving blank -->
 
 ---
 transition: slide-up
@@ -181,7 +181,6 @@ transition: slide-left
   </span>
 </div>
 
-<v-clicks>
 
 ### 核心功能
 
@@ -195,7 +194,6 @@ transition: slide-left
 *   **即开即用**：无需安装插件，网页版直接支持链接解析
 *   **高效阅读**：帮助快速判断网页价值，节省阅读时间
 
-</v-clicks>
 
 ::right::
 
@@ -204,7 +202,7 @@ transition: slide-left
 </div>
 
 ---
-layout: default
+layout: two-cols
 transition: slide-left
 ---
 
@@ -217,7 +215,6 @@ transition: slide-left
   </span>
 </div>
 
-<v-clicks>
 
 ### 应用场景
 
@@ -231,10 +228,13 @@ transition: slide-left
 *   处理速度极快
 *   多文档关联分析能力出色
 
-</v-clicks>
+
+::right::
+
+<!-- No image provided, leaving blank -->
 
 ---
-layout: default
+layout: two-cols
 transition: slide-left
 ---
 
@@ -247,7 +247,6 @@ transition: slide-left
   </span>
 </div>
 
-<v-clicks>
 
 ### 应用场景
 
@@ -261,7 +260,10 @@ transition: slide-left
 *   中文语境下逻辑能力最强
 *   支持深度思考模式 (Chain of Thought)
 
-</v-clicks>
+
+::right::
+
+<!-- No image provided, leaving blank -->
 
 ---
 transition: slide-up
@@ -353,7 +355,6 @@ transition: slide-left
   </span>
 </div>
 
-<v-clicks>
 
 ### 应用场景
 
@@ -367,7 +368,6 @@ transition: slide-left
 *   与微信生态深度集成
 *   上手难度为零
 
-</v-clicks>
 
 ::right::
 
@@ -376,7 +376,7 @@ transition: slide-left
 </div>
 
 ---
-layout: default
+layout: two-cols
 transition: slide-left
 ---
 
@@ -389,7 +389,7 @@ transition: slide-left
   </span>
 </div>
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="grid grid-cols-1 gap-6 mt-4">
 
 <div class="p-4 rounded-lg border border-indigo-500/20 bg-indigo-500/10">
   <h3 class="text-lg font-bold text-indigo-300 mb-2">应用场景</h3>
@@ -409,39 +409,71 @@ transition: slide-left
 
 </div>
 
+::right::
+
+<!-- No image provided, leaving blank -->
+
 ---
-layout: default
+layout: two-cols
 transition: slide-left
 ---
 
-# 推荐九：企业级开发平台
-## 百度千帆 & 阿里云百炼
+# 推荐九：企业级开发平台 (1)
+## 百度千帆
 
-<div class="grid grid-cols-2 gap-8 mt-8">
-
-<div class="bg-blue-600/10 p-4 rounded-lg border border-blue-600/20">
-  <div class="flex items-center gap-2 mb-4 text-blue-400">
-    <carbon:dashboard class="text-2xl" />
-    <h3 class="text-xl font-bold">百度千帆</h3>
-  </div>
-  <div class="text-sm opacity-80 mb-2"><strong>数据自动化处理：</strong></div>
-  <p class="text-xs opacity-70 mb-4">清洗信托业务数据，生成标准化报表</p>
-  <div class="text-sm opacity-80 mb-2"><strong>AI 应用搭建：</strong></div>
-  <p class="text-xs opacity-70">低代码搭建风险识别工具</p>
+<div class="mt-8">
+<div class="bg-blue-600/10 p-6 rounded-lg border border-blue-600/20">
+<div class="flex items-center gap-2 mb-4 text-blue-400">
+<carbon:dashboard class="text-3xl" />
+<h3 class="text-2xl font-bold">百度千帆</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="text-lg font-bold opacity-90 mb-2">数据自动化处理</div>
+<p class="text-sm opacity-70">清洗信托业务数据，生成标准化报表，大幅降低人工处理成本。</p>
+</div>
+<div>
+<div class="text-lg font-bold opacity-90 mb-2">AI 应用搭建</div>
+<p class="text-sm opacity-70">提供低代码平台，业务人员可快速搭建风险识别、客户画像等定制化 AI 工具。</p>
+</div>
+</div>
+</div>
 </div>
 
-<div class="bg-orange-600/10 p-4 rounded-lg border border-orange-600/20">
-  <div class="flex items-center gap-2 mb-4 text-orange-400">
-    <carbon:cloud class="text-2xl" />
-    <h3 class="text-xl font-bold">阿里云百炼</h3>
-  </div>
-  <div class="text-sm opacity-80 mb-2"><strong>智能文档处理：</strong></div>
-  <p class="text-xs opacity-70 mb-4">自动提取信托合同关键信息与合规审核</p>
-  <div class="text-sm opacity-80 mb-2"><strong>企业级集成：</strong></div>
-  <p class="text-xs opacity-70">生成API接口，支持企业内部系统调用</p>
+::right::
+
+<!-- No image provided, leaving blank -->
+
+---
+layout: two-cols
+transition: slide-left
+---
+
+# 推荐十：企业级开发平台 (2)
+## 阿里云百炼
+
+<div class="mt-8">
+<div class="bg-orange-600/10 p-6 rounded-lg border border-orange-600/20">
+<div class="flex items-center gap-2 mb-4 text-orange-400">
+<carbon:cloud class="text-3xl" />
+<h3 class="text-2xl font-bold">阿里云百炼</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="text-lg font-bold opacity-90 mb-2">智能文档处理</div>
+<p class="text-sm opacity-70">结合通义千问大模型，自动提取信托合同关键信息，实现智能合规审核。</p>
+</div>
+<div>
+<div class="text-lg font-bold opacity-90 mb-2">企业级集成</div>
+<p class="text-sm opacity-70">一键生成标准 API 接口，支持无缝集成到企业内部现有系统（ERP、OA 等）。</p>
+</div>
+</div>
+</div>
 </div>
 
-</div>
+::right::
+
+<!-- No image provided, leaving blank -->
 
 ---
 transition: slide-up
@@ -461,7 +493,7 @@ layout: two-cols
 transition: slide-left
 ---
 
-# 推荐十：通义万象
+# 推荐十一：通义万象
 ## 金融宣发物料的“零成本”影楼
 
 <div class="my-6">
@@ -509,7 +541,7 @@ layout: two-cols
 transition: slide-left
 ---
 
-# 推荐十一：ElevenLabs
+# 推荐十二：ElevenLabs
 ## 全球领先的 AI 语音与音频创作平台
 
 <div class="my-2">
@@ -564,7 +596,7 @@ layout: two-cols
 transition: slide-left
 ---
 
-# 推荐十二：HeyGen
+# 推荐十三：HeyGen
 ## 视觉 AI 数字人生成平台
 
 <div class="my-6">
@@ -654,63 +686,87 @@ transition: fade-out
 </div>
 
 ---
+layout: two-cols
+---
 
 # 落地建议：三步走策略
 
-<div class="grid grid-cols-3 gap-4 mt-12">
+<div class="grid grid-cols-1 gap-4 mt-12">
 
-  <div v-click class="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20">
-    <div class="text-4xl font-black text-blue-500 mb-2">01</div>
-    <div class="text-xl font-bold mb-2">日常减负</div>
-    <div class="text-sm opacity-80">
-      引入 <strong>WPS AI</strong> 和 <strong>ima</strong><br>
-      解决 PPT 制作和碎片信息整理
+  <div class="bg-blue-500/10 p-4 rounded-lg border border-blue-500/20">
+    <div class="flex items-center gap-4">
+      <div class="text-4xl font-black text-blue-500">01</div>
+      <div>
+        <div class="text-xl font-bold">日常减负</div>
+        <div class="text-sm opacity-80">
+          引入 <strong>WPS AI</strong> 和 <strong>ima</strong><br>
+          解决 PPT 制作和碎片信息整理
+        </div>
+      </div>
     </div>
   </div>
 
-  <div v-click class="bg-purple-500/10 p-4 rounded-lg border border-purple-500/20">
-    <div class="text-4xl font-black text-purple-500 mb-2">02</div>
-    <div class="text-xl font-bold mb-2">专业赋能</div>
-    <div class="text-sm opacity-80">
-      利用 <strong>Kimi</strong> 和 <strong>DeepSeek</strong><br>
-      辅助处理复杂研报和合同
+  <div class="bg-purple-500/10 p-4 rounded-lg border border-purple-500/20">
+    <div class="flex items-center gap-4">
+      <div class="text-4xl font-black text-purple-500">02</div>
+      <div>
+        <div class="text-xl font-bold">专业赋能</div>
+        <div class="text-sm opacity-80">
+          利用 <strong>Kimi</strong> 和 <strong>DeepSeek</strong><br>
+          辅助处理复杂研报和合同
+        </div>
+      </div>
     </div>
   </div>
 
-  <div v-click class="bg-green-500/10 p-4 rounded-lg border border-green-500/20">
-    <div class="text-4xl font-black text-green-500 mb-2">03</div>
-    <div class="text-xl font-bold mb-2">体系化建设</div>
-    <div class="text-sm opacity-80">
-      评估 <strong>Dify</strong> 私有化方案<br>
-      构建自己的数字资产库
+  <div class="bg-green-500/10 p-4 rounded-lg border border-green-500/20">
+    <div class="flex items-center gap-4">
+      <div class="text-4xl font-black text-green-500">03</div>
+      <div>
+        <div class="text-xl font-bold">体系化建设</div>
+        <div class="text-sm opacity-80">
+          评估 <strong>Dify</strong> 私有化方案<br>
+          构建自己的数字资产库
+        </div>
+      </div>
     </div>
   </div>
 
 </div>
 
+::right::
+
+<!-- No image provided, leaving blank -->
+
 ---
-layout: center
+layout: two-cols
 class: text-center
 ---
 
 # 结语
 
-<div class="text-3xl mt-10 font-serif italic text-yellow-200" v-motion
-  :initial="{ opacity: 0, y: 50 }"
-  :enter="{ opacity: 1, y: 0, transition: { duration: 1000 } }">
+<div class="text-left">
+
+  <div class="text-3xl mt-10 font-serif italic text-yellow-200" v-motion
+    :initial="{ opacity: 0, y: 50 }"
+    :enter="{ opacity: 1, y: 0, transition: { duration: 1000 } }">
+  </div>
+
+  <div class="mt-20 opacity-50 text-sm">
+    Presentation generated by Slidev
+  </div>
 
 </div>
 
-<div class="mt-20 opacity-50 text-sm">
-  Presentation generated by Slidev
-</div>
+::right::
+
+<!-- No image provided, leaving blank -->
 
 ---
 
 <style>
   /* Default background for all slides */
   .slidev-layout {
-    background-image: url('/picture/background1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
